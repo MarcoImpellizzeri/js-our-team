@@ -49,15 +49,18 @@ const teamMembers = [
 
 console.log(teamMembers);
 
-
 // MILESTONE 1:
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+// MILESTONE 2:
+// Stampare le stesse informazioni su DOM sottoforma di stringhe 
+
+const teamMembersList = document.querySelector(".team-members-list");
 
 for (let i = 0; i < teamMembers.length; i++) {
     const singleTeamMember = teamMembers[i];
 
+    teamMembersList.innerHTML += `<li class="list-group-item">${singleTeamMember.name} ${singleTeamMember.role} ${singleTeamMember.profile_pick}</li>`;
     console.log("name:", singleTeamMember.name,"role:", singleTeamMember.role,"profile pickture:", singleTeamMember.profile_pick);
-}
+};
 
-// MILESTONE 2:
-// Stampare le stesse informazioni su DOM sottoforma di stringhe 
+
