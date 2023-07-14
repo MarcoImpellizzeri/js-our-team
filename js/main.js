@@ -18,32 +18,32 @@ const teamMembers = [
     {
         name: "Wayne Barnett",
         role: "Founder & CEO",
-        profile_pick: "wayne-barnett-founder-ceo.jpg"
+        profile_pick: "img/wayne-barnett-founder-ceo.jpg"
     },
     {
         name: "Angela Caroll",
         role: "Chief Editor",
-        profile_pick: "angela-caroll-chief-editor.jpg"
+        profile_pick: "img/angela-caroll-chief-editor.jpg"
     },
     {
         name: "Walter Gordon",
         role: "Office Manager",
-        profile_pick: "walter-gordon-office-manager.jpg"
+        profile_pick: "img/walter-gordon-office-manager.jpg"
     },
     {
         name: "Angela Lopez",
         role: "Social Media Manager",
-        profile_pick: "angela-lopez-social-media-manager.jpg"
+        profile_pick: "img/angela-lopez-social-media-manager.jpg"
     },
     {
         name: "Scott Estrada",
         role: "Developer",
-        profile_pick: "scott-estrada-developer.jpg"
+        profile_pick: "img/scott-estrada-developer.jpg"
     },
     {
         name: "Barbara Ramos",
         role: "Graphic Designer",
-        profile_pick: "barbara-ramos-graphic-designer.jpg"
+        profile_pick: "img/barbara-ramos-graphic-designer.jpg"
     }
 ];
 
@@ -54,13 +54,22 @@ console.log(teamMembers);
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe 
 
-const teamMembersList = document.querySelector(".team-members-list");
+const teamMembersList = document.querySelector(".team-cards-container");
 
 for (let i = 0; i < teamMembers.length; i++) {
     const singleTeamMember = teamMembers[i];
 
-    teamMembersList.innerHTML += `<li class="list-group-item">${singleTeamMember.name} ${singleTeamMember.role} ${singleTeamMember.profile_pick}</li>`;
-    console.log("name:", singleTeamMember.name,"role:", singleTeamMember.role,"profile pickture:", singleTeamMember.profile_pick);
+    teamMembersList.innerHTML +=
+    `<div class="col col-md-6 col-lg-4 d-flex justify-content-center">
+        <div class="card my-card-bg" style="width: 18rem;">
+            <img class="card-img-top" src="${singleTeamMember.profile_pick}" alt="Immagine del profilo">           
+            <div class="card-body text-center text-light">
+                <h5 class="card-title">${singleTeamMember.name}</h5>
+                <p class="card-text">${singleTeamMember.role}</p>
+            </div>
+        </div>    
+    </div>`;
+    console.log("name:", singleTeamMember.name, "role:", singleTeamMember.role, "profile pickture:", singleTeamMember.profile_pick);
 };
 
 
