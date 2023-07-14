@@ -53,5 +53,11 @@ console.log(teamMembers);
 // MILESTONE 1:
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 
+for (let i = 0; i < teamMembers.length; i++) {
+    const singleTeamMember = teamMembers[i];
+
+    console.log("name:", singleTeamMember.name,"role:", singleTeamMember.role,"profile pickture:", singleTeamMember.profile_pick);
+}
+
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe 
